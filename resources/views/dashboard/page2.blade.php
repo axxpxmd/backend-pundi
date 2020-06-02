@@ -2,48 +2,60 @@
 
     <!-- Area Chart -->
     <div class="col-xl-8 col-lg-7">
-        <div class="row" style="padding-top: 70px">
-            <div class="col-lg-6 mb-4">
+        <div class="row" style="padding-top: 0px">
+            <div class="col-lg-6 mb-2">
                 <div class="card bg-primary text-white shadow">
                     <div class="card-body">
                         <a href="#" class="text-white">HEADLINE</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-2">
                 <div class="card bg-success text-white shadow">
                     <div class="card-body">
                         <a href="#" class="text-white">INDPETH</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-2">
                 <div class="card bg-info text-white shadow">
                     <div class="card-body">
                         <a href="#" class="text-white">KEBIJAKAN</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-2">
                 <div class="card bg-warning text-white shadow">
                     <div class="card-body">
                         <a href="#" class="text-white">SERBA SERBI</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-3">
                 <div class="card bg-danger text-white shadow">
                     <div class="card-body">
                         <a href="#" class="text-white">KONSULTASI</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-3">
                 <div class="card bg-secondary text-white shadow">
                     <div class="card-body">
                         <a href="#" class="text-white">USERS</a>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">PUNDI.ID</h6>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-3">
+                    <span>PEGIAT PENDIDIKAN INDONESIA</span><br>
+                    <span>Kana Pendidikan Tajam Dan Mencerahkan</span><br>
+                </div>
+                <a target="_blank" rel="nofollow" href="http://103.219.112.114/pundi/public/">PUNDI.ID &rarr;</a>
             </div>
         </div>
     </div>

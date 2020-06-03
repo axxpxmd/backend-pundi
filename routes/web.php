@@ -13,10 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/', function () {
+        return view('auth.login');
+    });
+
+    // Master User
+    Route::get('user', 'MasterUserController@user')->name('user');
+    Route::get('admin', 'MasterUserController@admin')->name('admin');
+});

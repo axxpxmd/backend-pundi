@@ -19,7 +19,6 @@
     </li>
     <hr class="sidebar-divider">
 
-    @if (Auth::user()->role_id == 2)
     <!-- Heading -->
     <div class="sidebar-heading">
         Interfac
@@ -49,7 +48,7 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="utilities-other.html">Master</a>
+                <a class="collapse-item" href="{{ route('master-artikel.artikel') }}">Master</a>
             </div>
         </div>
     </li>
@@ -146,6 +145,5 @@
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
-    @endif
 </ul>
 <!-- End of Sidebar -->

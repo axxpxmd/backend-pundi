@@ -36,4 +36,11 @@ Route::group(['middleware' => ['auth']], function () {
         // Delete Data
         Route::get('delete', 'MasterUserController@delete')->name('delete');
     });
+
+    // Master Artikel
+    Route::prefix('master-artikel')->name('master-artikel.')->group(function () {
+        // Artikel
+        Route::get('artikel', 'ArtikelController@index')->name('artikel');
+        Route::get('isi-artikel', 'ArtikelController@isi')->name('isi');
+    });
 });

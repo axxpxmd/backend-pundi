@@ -22,15 +22,17 @@ class HomeController extends Controller
 
         // Artikel
         $artikels = Artikel::all();
-        $artikel_terbaca = Artikel::sum('artikel_view');
+        $artikel_terbaca  = Artikel::sum('artikel_view');
         $artikel_headline = Artikel::wherekategori_id(1)->count();
+        $artikel_status   = Artikel::wherestatus(0)->count();
         // dd($artikel_headline);
 
         return view('home', compact(
             'users',
             'artikels',
             'artikel_terbaca',
-            'artikel_headline'
+            'artikel_headline',
+            'artikel_status'
         ));
     }
 }

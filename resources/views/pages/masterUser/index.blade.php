@@ -8,25 +8,62 @@
         @include('masterPages.top-bar')
         <!-- Begin Page -->
         <div class="container-fluid">
-            @if ($role == 'user')
+            <!-- Alerts Success-->
+            @if (session()->has('success'))
+                <div class="alert alert-success alert-dismissible fade show text-center col-md-3 container" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif  
+            <!-- Alerts Error -->
+            @if (count($errors) > 0)
+                <div class="alert alert-danger m-t-30 col-md-6">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Whoops Error!</strong>&nbsp;
+                    <span>You have {{ $errors->count() }} error</span>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if ($section == 'user')
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">User</h1>
                 </div>
                 <div class="card p-3">
-                    <button class="btn btn-info col-md-1 mb-3"><a href="" class="text-white text-decoration-none">Tambah Data</a></button>
-                    @include('masterPages.table_user')
+                    <button class="btn btn-info col-md-1 mb-3"><a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">Tambah Data</a></button>
+                    @include('pages.masterUser.table_user')
                 </div>
-            @else
+            @elseif($section == 'admin')
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Admin</h1>
                 </div>
                 <div class="card p-3">
-                    <button class="btn btn-info col-md-1 mb-3"><a href="" class="text-white text-decoration-none">Tambah Data</a></button>
-                    @include('masterPages.table_admin')
+                    <button class="btn btn-info col-md-1 mb-3"><a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">Tambah Data</a></button>
+                    @include('pages.masterUser.table_admin')
                 </div>
+            @elseif($section == 'tambah')
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Tambah Data</h1>
+                </div>
+                <div class="card p-3">
+                    @include('pages.masterUser.tambah')
+                </div>  
+            @else
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Edit Data</h1>
+                </div>
+                <div class="card p-3">
+                    @include('pages.masterUser.edit')
+                </div>  
             @endif
         </div>
-
     </div>
 </div>
 

@@ -15,16 +15,25 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['middleware' => ['auth']], function () {
 
-    Route::get('/', function () {
-        return view('auth.login');
-    });
-
     // Master User
-    Route::get('user', 'MasterUserController@user')->name('user');
-    Route::get('admin', 'MasterUserController@admin')->name('admin');
+    Route::prefix('master-user')->name('master-user.')->group(function () {
+        // User
+        Route::get('user', 'MasterUserController@user')->name('user');
+        // Admin
+        Route::get('admin', 'MasterUserController@admin')->name('admin');
+        // Tambah Data
+        Route::get('tambah', 'MasterUserController@tambah')->name('tambah');
+        Route::post('tambah/store', 'MasterUserController@store')->name('tambah.store');
+        // Edit Data
+        Route::get('edit', 'MasterUserController@edit')->name('edit');
+        Route::put('edit/update', 'MasterUserController@update')->name('edit.update');
+        // Delete Data
+        Route::get('delete', 'MasterUserController@delete')->name('delete');
+    });
 });

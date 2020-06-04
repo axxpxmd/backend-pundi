@@ -9,14 +9,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($users as $i)
+        @foreach ($admins as $i)
         <tr>
             <td>{{ $i->name }}</td>
             <td>{{ $i->email }}</td>
-            <td>{{ $i->role_id }}</td>
+            <td>{{ $i->roles->role }}</td>
             <td>{{ $i->nomor_hp }}</td>
             <td class="text-center">
-                <a href="#"><i class="fa fa-edit mr-2"></i></a>
+                <a href="{{ route('master-user.edit', 'user='.$i->id) }}"><i class="fa fa-edit mr-2"></i></a>
                 <a href="#"><i class="fa fa-trash"></i></a>
             </td>
         </tr>

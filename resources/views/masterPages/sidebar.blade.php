@@ -19,9 +19,10 @@
     </li>
     <hr class="sidebar-divider">
 
+    @if (Auth::user()->role_id == 2)
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Interfac
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
@@ -33,8 +34,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('user') }}">User</a>
-                <a class="collapse-item" href="{{ route('admin') }}">Admin</a>
+                <a class="collapse-item" href="{{ route('master-user.user') }}">User</a>
+                <a class="collapse-item" href="{{ route('master-user.admin') }}">Admin</a>
             </div>
         </div>
     </li>
@@ -43,16 +44,12 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-art fa-wrench"></i>
+            <i class="fas fa-archive"></i>
             <span>Artikel</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">Colors</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
+                <a class="collapse-item" href="utilities-other.html">Master</a>
             </div>
         </div>
     </li>
@@ -149,6 +146,6 @@
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
-
+    @endif
 </ul>
 <!-- End of Sidebar -->

@@ -1,7 +1,7 @@
+@if (Auth::user()->role_id == 2)
 @extends('layouts.app')
 
 @section('content')
-
 <!-- Main Content -->
 <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
@@ -12,12 +12,14 @@
                 <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
             </div>
             <!-- Page 1 -->
-            @include('dashboard.page1')
+            @include('pages.dashboard.page1')
             <!-- Page 2 -->
-            @include('dashboard.page2')
+            @include('pages.dashboard.page2')
         </div>
 
     </div>
 </div>
-
 @endsection
+@else
+@include('masterPages.error')
+@endif

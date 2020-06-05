@@ -26,13 +26,20 @@
 <body id="page-top">
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <div class="container-fluid">
+            <div class="container-fluid" style="margin-top: 15%">
                 <!-- 404 Error Text -->
                 <div class="text-center">
                     <div class="error mx-auto" data-text="404">404</div>
                     <p class="lead text-gray-800 mb-5">Page Not Found</p>
                     <p class="text-gray-500 mb-0">Anda bukan Administrator / Editor</p>
-                    <a href="http://103.219.112.114/pundi/public/">PUNDI.ID &rarr; </a>
+                    <a href="http://103.219.112.114/pundi/public/">PUNDI.ID</a>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Log Out
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>

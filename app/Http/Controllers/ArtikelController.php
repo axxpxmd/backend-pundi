@@ -46,4 +46,13 @@ class ArtikelController extends Controller
             ->route('master-artikel.isi', 'post=' . $id)
             ->withSuccess('Artikel Berhasil Terpublish !');
     }
+
+    public function delete(Request $request)
+    {
+        Artikel::whereid($request->artikel)->delete();
+
+        return redirect()
+            ->back()
+            ->withSuccess('Data berhasil dihapus !');
+    }
 }

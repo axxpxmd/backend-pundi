@@ -28,9 +28,14 @@
                     <label for="name" class="col-md-2 col-form-label">Role<span class="text-danger ml-1">*</span></label>
                     <div class="col-md-8">
                         <select class="form-control" name="role_id">
-                            @foreach ($roles as $i)
-                                <option value="{{ $i->id }}">{{ $i->role }}</option>
-                            @endforeach
+                            @if ($users->role_id == 2)
+                                <option value="2">Admin</option>
+                                <option value="1">User</option>
+                            @else
+                                @foreach ($roles as $i)
+                                    <option value="{{ $i->id }}">{{ $i->role }}</option>
+                                @endforeach
+                            @endif
                         </select>
                     </div>
                 </div>

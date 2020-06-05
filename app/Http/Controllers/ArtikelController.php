@@ -32,4 +32,18 @@ class ArtikelController extends Controller
             'section'
         ));
     }
+
+    public function publishArtikel(Request $request)
+    {
+        $id = $request->post;
+
+        $publish = Artikel::FindOrFail($id);
+        $publish->update([
+            'status' => 1
+        ]);
+
+        return redirect()
+            ->route('master-artikel.isi', 'post=' . $id)
+            ->withSuccess('Artikel Berhasil Terpublish !');
+    }
 }

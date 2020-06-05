@@ -4,4 +4,5 @@
     <div>
         {!! $artikel->isi !!}
     </div>
+
 </div>

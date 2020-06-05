@@ -130,7 +130,7 @@ class MasterUserController extends Controller
         User::whereid($request->user)->delete();
 
         return redirect()
-            ->route('master-user.user')
+            ->back()
             ->withSuccess('Data berhasil dihapus !');
     }
 }

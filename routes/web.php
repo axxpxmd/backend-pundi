@@ -42,5 +42,6 @@ Route::group(['middleware' => ['auth']], function () {
         // Artikel
         Route::get('artikel', 'ArtikelController@index')->name('artikel');
         Route::get('isi-artikel', 'ArtikelController@isi')->name('isi');
+        Route::put('publish-artikel', 'ArtikelController@publishArtikel')->name('isi.publishArtikel');
     });
 });

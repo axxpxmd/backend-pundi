@@ -53,21 +53,24 @@ class MasterUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'     => 'required | string | max:225',
+            'name'     => 'required | string | max:50',
+            'username' => 'required | string | max:50',
             'email'    => 'required | string | email | unique:users',
             'password' => 'required | string',
             'nomor_hp' => 'required | string | max:20'
         ]);
 
         $name     = $request->name;
+        $username = $request->username;
         $email    = $request->email;
         $password = $request->password;
         $role_id  = $request->role_id;
         $nomor_hp = $request->nomor_hp;
 
         $user = new User();
-        $user->name  = $name;
-        $user->email = $email;
+        $user->name     = $name;
+        $user->username = $username;
+        $user->email    = $email;
         $user->password = Hash::make($password);
         $user->role_id  = $role_id;
         $user->nomor_hp = $nomor_hp;
@@ -95,23 +98,26 @@ class MasterUserController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'name'     => 'required | string | max:225',
+            'name'     => 'required | string | max:50',
+            'username' => 'required | string | max:50',
             'email'    => 'required | string | email | unique:users,email,' . $request->user,
             'nomor_hp' => 'required | string | max:20'
         ]);
 
         $user_id  = $request->user;
         $name     = $request->name;
+        $username = $request->username;
         $email    = $request->email;
         $role_id  = $request->role_id;
         $nomor_hp = $request->nomor_hp;
 
         $user = User::findOrFail($user_id);
         $user->update([
-            'name' => $name,
-            'email' => $email,
+            'name'     => $name,
+            'username' => $username,
+            'email'    => $email,
             'nomor_hp' => $nomor_hp,
-            'role_id' => $role_id
+            'role_id'  => $role_id
         ]);
 
         return redirect()

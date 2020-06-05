@@ -28,10 +28,10 @@
                         <form method="POST" action="{{ route('login') }}" autocomplete="off">
                             @csrf
                             <div class="form-group has-icon"><i class="fa fa-user"></i>
-                                <input type="email" class="form-control form-control-lg  @if ($errors->has('email')) is-invalid @endif" placeholder="Email" name="email" autocomplete="off" value="{{ old('email') }}" required autofocus>
-                                @if ($errors->has('email'))
+                                <input type="username" class="form-control form-control-lg  @if ($errors->has('username')) is-invalid @endif" placeholder="username" name="username" autocomplete="off" value="{{ old('username') }}" required autofocus>
+                                @if ($errors->has('username'))
                                     <div class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('username') }}</strong>
                                     </div>
                                 @endif
                             </div>

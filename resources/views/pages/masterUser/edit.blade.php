@@ -11,11 +11,19 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="username" class="col-md-2 col-form-label">Username<span class="text-danger ml-1">*</span></label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control " name="username" value="{{ $users->username }}">
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="name" class="col-md-2 col-form-label">Email<span class="text-danger ml-1">*</span></label>
                     <div class="col-md-8">
                         <input type="email" class="form-control " name="email" value="{{ $users->email }}">
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-6">
                 <div class="form-group row">
                     <label for="name" class="col-md-2 col-form-label">Role<span class="text-danger ml-1">*</span></label>
                     <div class="col-md-8">
@@ -26,8 +34,6 @@
                         </select>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6">
                 <div class="form-group row">
                     <label for="name" class="col-md-2 col-form-label">Nomor HP <span class="text-danger ml-1">*</span></label>
                     <div class="col-md-8">

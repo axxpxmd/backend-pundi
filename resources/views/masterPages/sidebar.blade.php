@@ -40,7 +40,7 @@
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-archive"></i>
@@ -138,7 +138,7 @@
                 <a class="collapse-item" href="forgot-password.html">Kolom Pertanyaan</a>
             </div>
         </div>
-    </li>
+    </li> --}}
     <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->

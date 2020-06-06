@@ -55,7 +55,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="card p-3">
+                <div class="card p-3" >
                     @include('pages.artikel.isi')
                 </div>
             </div>

@@ -10,7 +10,7 @@
         <div class="container-fluid">
             <!-- Alerts Success-->
             @if (session()->has('success'))
-                <div class="alert alert-success alert-dismissible fade show text-center col-md-3 container" role="alert">
+                <div class="alert alert-success alert-dismissible fade show col-md-5" role="alert">
                     {{ session('success') }}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -19,7 +19,7 @@
             @endif  
             <!-- Alerts Error -->
             @if (count($errors) > 0)
-                <div class="alert alert-danger m-t-30 col-md-6">
+                <div class="alert alert-danger alert-dismissible fade show col-md-5">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

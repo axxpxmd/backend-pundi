@@ -2,6 +2,7 @@
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
+                <th width="30">No</th>
                 <th>Nama</th>
                 <th>Eamil</th>
                 <th>Role</th>
@@ -10,8 +11,11 @@
             </tr>
         </thead>
         <tbody>
+            <?php $no = 0;?>
             @foreach ($users as $i)
+            <?php $no++ ;?>
             <tr>
+                <td>{{ $no }}</td>
                 <td>{{ $i->name }}</td>
                 <td>{{ $i->email }}</td>
                 <td>{{ $i->roles->role }}</td>

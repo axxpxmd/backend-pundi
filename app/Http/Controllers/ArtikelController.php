@@ -9,6 +9,7 @@ use App\Models\Artikel;
 
 class ArtikelController extends Controller
 {
+    // 
     protected $view = 'pages.artikel.index';
 
     public function index()

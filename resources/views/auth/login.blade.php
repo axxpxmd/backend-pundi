@@ -47,7 +47,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-9  height-full blue accent-3 align-self-center text-center" data-bg-repeat="false"
+                <div class="col-md-9  height-full blue accent-3 align-self-center text-center img-fluid img-responsive" data-bg-repeat="false"
                     data-bg-possition="center"
                     style="background: url('images/icon/icon-plane.png') #FFEFE4">
                 </div>

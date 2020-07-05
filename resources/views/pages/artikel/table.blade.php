@@ -18,8 +18,7 @@
             <tr>
                 <td class="text-center">{{ $no }}</td>
                 <td>
-                    <a class="text-decoration-none"
-                        href="{{ route('master-artikel.isi', 'post='.$i->id) }}">{{ $i->judul }}</a>
+                    <a class="text-decoration-none" href="{{ route('master-artikel.isi', 'post='.$i->id) }}">{{ $i->judul }}</a>
                 </td>
                 <td>{{ $i->kategori->n_kategori }}</td>
                 <td>{{ $i->user->name }}</td>
@@ -30,8 +29,6 @@
                 <td>sudah terverfikasi</td>
                 @endif
                 <td class="text-center">
-                    {{-- <a href="{{ route('master-user.edit', 'user='.$i->id) }}"><i class="fa fa-edit mr-2"></i></a>
-                    --}}
                     <a href="" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
@@ -54,8 +51,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary">
-                    <a class="text-white text-decoration-none"
-                        href="{{ route('master-artikel.delete', 'artikel='.$i->id) }}">Hapus</a>
+                    <a class="text-white text-decoration-none" href="{{ route('master-artikel.delete', 'artikel='.$i->id) }}">Hapus</a>
                 </button>
             </div>
         </div>

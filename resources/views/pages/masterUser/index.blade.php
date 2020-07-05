@@ -34,7 +34,7 @@
             @endif
             @if ($section == 'user')
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">User</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Akun User</h1>
                 </div>
                 <div class="card p-3">
                     <button class="btn btn-info col-md-1 mb-3"><a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">Tambah Data</a></button>
@@ -42,7 +42,7 @@
                 </div>
             @elseif($section == 'admin')
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Admin</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Akun Admin</h1>
                 </div>
                 <div class="card p-3">
                     <button class="btn btn-info col-md-1 mb-3"><a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">Tambah Data</a></button>

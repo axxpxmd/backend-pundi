@@ -1,13 +1,13 @@
 <div class="table-responsive">
-    <table id="example" class="table table-striped table-bordered" style="width:100%">
+    <table id="dataTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th width="30">No</th>
-                <th>Nama</th>
-                <th>Eamil</th>
-                <th>Role</th>
-                <th>Nomor HP</th>
-                <th class="text-center">Aksi</th>
+                <th class="btb-n" width="30">No</th>
+                <th class="btb-n">Nama</th>
+                <th class="btb-n">Email</th>
+                <th class="btb-n">Role</th>
+                <th class="btb-n">Nomor HP</th>
+                <th class="text-center btb-n">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -15,7 +15,7 @@
             @foreach ($users as $i)
             <?php $no++ ;?>
             <tr>
-                <td>{{ $no }}</td>
+                <td class="text-center">{{ $no }}</td>
                 <td>{{ $i->name }}</td>
                 <td>{{ $i->email }}</td>
                 <td>{{ $i->roles->role }}</td>
@@ -28,23 +28,26 @@
             @endforeach
         </tbody>
     </table>
+    <button class="btn btn-dark mt-2">
+        <a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none"><i class="fa fa-plus-square mr-2"></i>Tambah </a>
+    </button>
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
+                <h6 class="modal-title" id="exampleModalLabel">
                     Yakin ingin menghapus data ini ?
-                </h5>
+                </h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary">
-                    <a class="text-white text-decoration-none" href="{{ route('master-user.delete', 'user='.$i->id) }}">Hapus</a>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times mr-2"></i>Cancel</button>
+                <button type="button" class="btn btn-danger">
+                    <a class="text-white text-decoration-none" href="{{ route('master-user.delete', 'user='.$i->id) }}"><i class="fa fa-trash mr-2"></i>Hapus</a>
                 </button>
             </div>
         </div>

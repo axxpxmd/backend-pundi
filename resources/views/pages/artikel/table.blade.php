@@ -2,13 +2,13 @@
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>No</th>
-                <th>Judul</th>
-                <th>Kategori</th>
-                <th>Penulis</th>
-                <th>Tanggal</th>
-                <th>status</th>
-                <th class="text-center">Aksi</th>
+                <th class="btb-n">No</th>
+                <th class="btb-n">Judul</th>
+                <th class="btb-n">Kategori</th>
+                <th class="btb-n">Penulis</th>
+                <th width="100" class="btb-n">Tanggal</th>
+                <th class="btb-n">status</th>
+                <th class="text-center btb-n">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -49,9 +49,9 @@
                 </button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary">
-                    <a class="text-white text-decoration-none" href="{{ route('master-artikel.delete', 'artikel='.$i->id) }}">Hapus</a>
+                <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times mr-2"></i>Cancel</button>
+                <button type="button" class="btn btn-danger">
+                    <a class="text-white text-decoration-none" href="{{ route('master-artikel.delete', 'artikel='.$i->id) }}"><i class="fa fa-trash mr-2"></i>Hapus</a>
                 </button>
             </div>
         </div>

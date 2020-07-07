@@ -13,7 +13,9 @@
 
     <!-- CSS -->
     @yield('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/sb-admin-2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/util.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/sb-admin-2.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.min.css') }}">
 
     <!-- Icon -->

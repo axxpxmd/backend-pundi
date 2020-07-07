@@ -10,58 +10,58 @@
         <div class="container-fluid">
             <!-- Alerts Success-->
             @if (session()->has('success'))
-                <div class="alert alert-success alert-dismissible fade show col-md-5" role="alert">
-                    {{ session('success') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+            <div class="alert alert-success alert-dismissible fade show col-md-5" role="alert">
+                {{ session('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             @endif  
             <!-- Alerts Error -->
             @if (count($errors) > 0)
-                <div class="alert alert-danger alert-dismissible fade show col-md-5">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <strong>Whoops Error!</strong>&nbsp;
-                    <span>You have {{ $errors->count() }} error</span>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="alert alert-danger alert-dismissible fade show col-md-5">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>Whoops Error!</strong>&nbsp;
+                <span>You have {{ $errors->count() }} error</span>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
+
+            <!-- Content -->
             @if ($section == 'user')
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Akun User</h1>
-                </div>
-                <div class="card p-3">
-                    <button class="btn btn-info col-md-1 mb-3"><a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">Tambah Data</a></button>
+            <div class="card mt-2">
+                <h5 class="card-header bg-aqua"><i class="fa fa-user mr-3"></i>Akun User </h5>
+                <div class="card-body">
                     @include('pages.masterUser.table_user')
                 </div>
+            </div>
             @elseif($section == 'admin')
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Akun Admin</h1>
-                </div>
-                <div class="card p-3">
-                    <button class="btn btn-info col-md-1 mb-3"><a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">Tambah Data</a></button>
+            <div class="card mt-2">
+                <h5 class="card-header"><i class="fa fa-user-secret mr-3"></i>Akun Admin</h5>
+                <div class="card-body">
                     @include('pages.masterUser.table_admin')
                 </div>
+            </div>
             @elseif($section == 'tambah')
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Tambah Data</h1>
-                </div>
-                <div class="card p-3">
+            <div class="card mt-2">
+                <h5 class="card-header"><i class="fa fa-user-plus m-l-16"></i><span class="ml-2">Tambah User</span></h5>
+                <div class="card-body">
                     @include('pages.masterUser.tambah')
-                </div>  
-            @else
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Edit Data</h1>
                 </div>
-                <div class="card p-3">
+            </div>
+            @else
+            <div class="card mt-2">
+                <h5 class="card-header"><i class="fa fa-user-edit m-l-16"></i><span class="ml-2">Edit User</span></h5>
+                <div class="card-body">
                     @include('pages.masterUser.edit')
-                </div>  
+                </div>
+            </div> 
             @endif
         </div>
     </div>
@@ -74,7 +74,7 @@
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#dataTable').DataTable();
         } );
     </script>
 @endsection

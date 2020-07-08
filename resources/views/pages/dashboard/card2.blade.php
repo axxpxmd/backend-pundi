@@ -53,7 +53,7 @@
                     <span>PEGIAT PENDIDIKAN INDONESIA</span><br>
                     <span>Kana Pendidikan Tajam Dan Mencerahkan</span><br>
                 </div>
-                <a target="_blank" rel="nofollow" href="http://103.219.112.114/pundi/public/">PUNDI.ID &rarr;   </a>
+                <a target="_blank" rel="nofollow" href="http://pundi.or.id">PUNDI.ID &rarr;   </a>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top border">
     <div class="row">
         <li type="none" class="mr-1 ml-4">
             <i class="fa fa-calendar-check mr-1" style="color:#4066D5"></i>

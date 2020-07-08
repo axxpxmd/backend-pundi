@@ -30,8 +30,8 @@
             @endif
             <!-- Content -->
             @if ($section == 'index')
-            <div class="card mt-2">
-                <h5 class="card-header"><i class="fa fa-file"></i><span class="ml-2">Artikel Terverifikasi</span></h5>
+            <div class="card">
+                <h5 class="card-header primary-color"><i class="fa fa-file"></i><span class="ml-2">Artikel Terverifikasi</span></h5>
                 <div class="card-body">
                     @include('pages.artikel.table')
                 </div>

@@ -30,29 +30,29 @@
             @endif
             <!-- Content -->
             @if ($section == 'user')
-            <div class="card mt-2">
-                <h5 class="card-header bg-aqua"><i class="fa fa-user mr-3"></i>Akun User </h5>
+            <div class="card">
+                <h5 class="card-header primary-color"><i class="fa fa-user mr-3"></i>Akun User </h5>
                 <div class="card-body">
                     @include('pages.masterUser.table_user')
                 </div>
             </div>
             @elseif($section == 'admin')
-            <div class="card mt-2">
-                <h5 class="card-header"><i class="fa fa-user-secret mr-3"></i>Akun Admin</h5>
+            <div class="card">
+                <h5 class="card-header primary-color"><i class="fa fa-user-secret mr-3"></i>Akun Admin</h5>
                 <div class="card-body">
                     @include('pages.masterUser.table_admin')
                 </div>
             </div>
             @elseif($section == 'tambah')
-            <div class="card mt-2">
-                <h5 class="card-header"><i class="fa fa-user-plus m-l-16"></i><span class="ml-2">Tambah User</span></h5>
+            <div class="card">
+                <h5 class="card-header primary-color"><i class="fa fa-user-plus m-l-16"></i><span class="ml-2">Tambah User</span></h5>
                 <div class="card-body">
                     @include('pages.masterUser.tambah')
                 </div>
             </div>
             @else
-            <div class="card mt-2">
-                <h5 class="card-header"><i class="fa fa-user-edit m-l-16"></i><span class="ml-2">Edit User</span></h5>
+            <div class="card">
+                <h5 class="card-header primary-color"><i class="fa fa-user-edit m-l-16"></i><span class="ml-2">Edit User</span></h5>
                 <div class="card-body">
                     @include('pages.masterUser.edit')
                 </div>

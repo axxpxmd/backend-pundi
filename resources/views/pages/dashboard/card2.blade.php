@@ -51,7 +51,7 @@
             <div class="card-body">
                 <div class="text-center mb-3">
                     <span>PEGIAT PENDIDIKAN INDONESIA</span><br>
-                    <span>Kana Pendidikan Tajam Dan Mencerahkan</span><br>
+                    <span>Kanal Pendidikan Tajam Dan Mencerahkan</span><br>
                 </div>
                 <a target="_blank" rel="nofollow" href="http://pundi.or.id">PUNDI.ID &rarr;   </a>
             </div>

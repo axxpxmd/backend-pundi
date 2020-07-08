@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-    <!-- Tanggal dan Waktu -->
     <div class="row">
         <li type="none" class="mr-1 ml-4">
             <i class="fa fa-calendar-check mr-1" style="color:#4066D5"></i>
@@ -18,20 +17,14 @@
             <a id="detik"></a>
         </li>
     </div>
-    <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
-        <!-- Notifikasi -->
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell" style="color:#4066D5"></i>
-                <!-- Counter - Alerts -->
                 <span class="badge badge-danger badge-counter">{{ $artikel->count() }}</span>
             </a>
-            <!-- Dropdown Notifikasi -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">
-                    Notifikasi
-                </h6>
+                <h6 class="dropdown-header">Notifikasi</h6>
                 <?php $no = 0;?>
                 @foreach ($artikel->take(3) as $i)
                 <?php $no++ ;?>
@@ -44,13 +37,11 @@
             </div>
         </li>
         <div class="topbar-divider d-none d-sm-block"></div>
-        <!-- Profil -->
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                 <img class="img-profile rounded-circle" src="{{ asset('images/boy.png') }}">
             </a>
-            <!-- Dropdown Profil -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -64,7 +55,7 @@
     </ul>
 </nav>
 <script>
-    // Jam
+    // Hours
     window.setTimeout("waktu()", 1000);
 
     function addZero(i) {
@@ -82,21 +73,21 @@
         document.getElementById("detik").innerHTML = addZero(waktu.getSeconds());
     }
 
-    // Hari
+    // Day
     arrHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"]
     Hari = new Date().getDay();
     document.getElementById("hari").innerHTML = arrHari[Hari];
 
-    // Tanggal
+    // Date
     Tanggal = new Date().getDate();
     document.getElementById("tanggal").innerHTML = Tanggal;
 
-    // Bulan
+    // Month
     arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
     Bulan = new Date().getMonth();
     document.getElementById("bulan").innerHTML = arrbulan[Bulan];
 
-    // Tahun
+    // Year
     Tahun = new Date().getFullYear();
     document.getElementById("tahun").innerHTML = Tahun;
 

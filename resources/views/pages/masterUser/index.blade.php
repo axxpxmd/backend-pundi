@@ -1,12 +1,8 @@
 @extends('layouts.app')
-
 @section('content')
-
-<!-- Main Content -->
 <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
         @include('masterPages.top-bar')
-        <!-- Begin Page -->
         <div class="container-fluid">
             <!-- Alerts Success-->
             @if (session()->has('success'))
@@ -32,7 +28,6 @@
                 </ul>
             </div>
             @endif
-
             <!-- Content -->
             @if ($section == 'user')
             <div class="card mt-2">

@@ -29,7 +29,9 @@
         </tbody>
     </table>
     <button class="btn btn-dark mt-2">
-        <a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none"><i class="fa fa-plus-square mr-2"></i>Tambah </a>
+        <a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">
+            <i class="fa fa-plus-square mr-2"></i>Tambah 
+        </a>
     </button>
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -45,9 +47,13 @@
                 </button>
             </div>
             <div class="modal-footer border-0">
-                <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times mr-2"></i>Cancel</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">
+                    <i class="fa fa-times mr-2"></i>Cancel
+                </button>
                 <button type="button" class="btn btn-danger">
-                    <a class="text-white text-decoration-none" href="{{ route('master-user.delete', 'user='.$i->id) }}"><i class="fa fa-trash mr-2"></i>Hapus</a>
+                    <a class="text-white text-decoration-none" href="{{ route('master-user.delete', 'user='.$i->id) }}">
+                        <i class="fa fa-trash mr-2"></i>Hapus
+                    </a>
                 </button>
             </div>
         </div>

@@ -1,8 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-use Illuminate\Http\Request;
+/**
+ * Description of welcome
+ *
+ * @author Asip Hamdi
+ * Github : axxpxmd
+ */
+
+namespace App\Http\Controllers;
 
 // Models
 use App\User;
@@ -20,7 +30,7 @@ class HomeController extends Controller
         // Users
         $users = User::all();
 
-        // Artikel
+        // Article
         $artikels = Artikel::all();
         $artikel_terbaca  = Artikel::sum('artikel_view');
         $artikel_status   = Artikel::wherestatus(0)->count();

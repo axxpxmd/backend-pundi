@@ -29,11 +29,11 @@
                     <div class="col-md-8">
                         <select class="form-control" name="role_id">
                             @if ($users->role_id == 2)
-                                <option value="2">Admin</option>
-                                <option value="1">User</option>
+                            <option value="2">Admin</option>
+                            <option value="1">User</option>
                             @else
                                 @foreach ($roles as $i)
-                                    <option value="{{ $i->id }}">{{ $i->role }}</option>
+                                <option value="{{ $i->id }}">{{ $i->role }}</option>
                                 @endforeach
                             @endif
                         </select>

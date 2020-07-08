@@ -1,5 +1,4 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-    <!-- Title -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
         <div class="sidebar-brand-icon rotate-n-15">
             <img src="{{ asset('images/logo-round.png') }}" width="30" alt="">
@@ -7,7 +6,6 @@
         <div class="sidebar-brand-text mx-3">PUNDI.ID</div>
     </a>
     <hr class="sidebar-divider my-0">
-    <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="{{ route('home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -15,16 +13,12 @@
         </a>
     </li>
     <hr class="sidebar-divider">
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Data
-    </div>
-    <!-- Nav Item - Data User -->
+    <div class="sidebar-heading">Data</div>
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
             aria-controls="collapseTwo">
             <i class="fas fa-user"></i>
-            <span>Data User</span>
+            <span>User</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -33,7 +27,6 @@
             </div>
         </div>
     </li>
-    <!-- Nav Item - Artikel -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-archive"></i>
@@ -47,9 +40,7 @@
         </div>
     </li>
     <hr class="sidebar-divider">
-    <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 </ul>
-<!-- End of Sidebar -->

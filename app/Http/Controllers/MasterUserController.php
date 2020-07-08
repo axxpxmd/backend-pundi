@@ -1,20 +1,32 @@
 <?php
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of welcome
+ *
+ * @author Asip Hamdi
+ * Github : axxpxmd
+ */
+
 namespace App\Http\Controllers;
 
-use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 // Models
 use App\User;
+use App\Models\Role;
 
 class MasterUserController extends Controller
 {
     protected $view = 'pages.masterUser.index';
 
-    // Daftar User
+    // List User
     public function user()
     {
         $section = 'user';
@@ -26,7 +38,7 @@ class MasterUserController extends Controller
         ));
     }
 
-    // Daftar Admin
+    // List Admin
     public function admin()
     {
         $section = 'admin';
@@ -38,7 +50,7 @@ class MasterUserController extends Controller
         ));
     }
 
-    // Tambah Data
+    // Add Data
     public function tambah()
     {
         $section = 'tambah';
@@ -81,6 +93,7 @@ class MasterUserController extends Controller
             ->withSuccess('Data berhasil ditambah !');
     }
 
+    // Edit Data
     public function edit(Request $request)
     {
         $section = 'edit';
@@ -125,6 +138,7 @@ class MasterUserController extends Controller
             ->withSuccess('Data berhasil diperbaharui !');
     }
 
+    // Delete Data
     public function delete(Request $request)
     {
         User::whereid($request->user)->delete();

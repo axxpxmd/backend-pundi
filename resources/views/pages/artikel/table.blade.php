@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table id="example" class="table table-striped table-bordered" style="width:100%">
+    <table id="dataTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th class="btb-n">No</th>
@@ -49,9 +49,13 @@
                 </button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times mr-2"></i>Cancel</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">
+                    <i class="fa fa-times mr-2"></i>Cancel
+                </button>
                 <button type="button" class="btn btn-danger">
-                    <a class="text-white text-decoration-none" href="{{ route('master-artikel.delete', 'artikel='.$i->id) }}"><i class="fa fa-trash mr-2"></i>Hapus</a>
+                    <a class="text-white text-decoration-none" href="{{ route('master-artikel.delete', 'artikel='.$i->id) }}">
+                        <i class="fa fa-trash mr-2"></i>Hapus
+                    </a>
                 </button>
             </div>
         </div>

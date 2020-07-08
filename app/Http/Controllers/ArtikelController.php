@@ -1,5 +1,17 @@
 <?php
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of welcome
+ *
+ * @author Asip Hamdi
+ * Github : axxpxmd
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -9,12 +21,12 @@ use App\Models\Artikel;
 
 class ArtikelController extends Controller
 {
-    // 
     protected $view = 'pages.artikel.index';
 
+    // List Article
     public function index()
     {
-        $section = 'index';
+        $section  = 'index';
         $artikels = Artikel::all();
 
         return view($this->view, compact(
@@ -23,6 +35,7 @@ class ArtikelController extends Controller
         ));
     }
 
+    // Artickel Content
     public function isi(Request $request)
     {
         $section = 'isi';
@@ -34,6 +47,7 @@ class ArtikelController extends Controller
         ));
     }
 
+    // Publish Article
     public function publishArtikel(Request $request)
     {
         $id = $request->post;
@@ -48,6 +62,7 @@ class ArtikelController extends Controller
             ->withSuccess('Artikel Berhasil Terpublish !');
     }
 
+    // Delete Article
     public function delete(Request $request)
     {
         Artikel::whereid($request->artikel)->delete();

@@ -3,7 +3,7 @@
 <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
         @include('masterPages.top-bar')
-        <div class="container-fluid">
+        <div class="ml-2 mr-2">
             <!-- Alerts Success-->
             @if (session()->has('success'))
             <div class="alert alert-success alert-dismissible fade show col-md-5" role="alert">
@@ -45,14 +45,14 @@
             </div>
             @elseif($section == 'tambah')
             <div class="card">
-                <h5 class="card-header primary-color"><i class="fa fa-user-plus m-l-16"></i><span class="ml-2">Tambah User</span></h5>
+                <h5 class="card-header primary-color"><i class="fa fa-user-plus"></i><span class="ml-2">Tambah User</span></h5>
                 <div class="card-body">
                     @include('pages.masterUser.tambah')
                 </div>
             </div>
             @else
             <div class="card">
-                <h5 class="card-header primary-color"><i class="fa fa-user-edit m-l-16"></i><span class="ml-2">Edit User</span></h5>
+                <h5 class="card-header primary-color"><i class="fa fa-user-edit"></i><span class="ml-2">Edit User</span></h5>
                 <div class="card-body">
                     @include('pages.masterUser.edit')
                 </div>

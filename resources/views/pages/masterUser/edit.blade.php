@@ -2,7 +2,7 @@
     <form action="{{ route('master-user.edit.update', 'user='.$users->id) }}" method="POST">
         {{ csrf_field() }}
         {{ method_field('PUT') }}
-        <div class="row p-1 pl-3">
+        <div class="row">
             <div class="col-sm-6">
                 <div class="form-group row">
                     <label for="name" class="col-md-2 col-form-label">Nama<span class="text-danger ml-1">*</span></label>

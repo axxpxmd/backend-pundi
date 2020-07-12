@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top border">
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top border">
     <div class="row">
         <li type="none" class="mr-1 ml-4">
-            <i class="fa fa-calendar-check mr-1" style="color:#4066D5"></i>
+            <i class="fa fa-calendar-check mr-1" style="color:#2979FF"></i>
             <a id="hari"></a>
             ,
             <a id="tanggal"></a>
@@ -20,7 +20,7 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell" style="color:#4066D5"></i>
+                <i class="fas fa-bell" style="color:#2979FF"></i>
                 <span class="badge badge-danger badge-counter">{{ $artikel->count() }}</span>
             </a>
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">

@@ -97,7 +97,7 @@
     data: {
         labels: ["Headline", "Indepth", "Kebijakan", "Serba Serbi", 'Konsultasi'],
         datasets: [{
-            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
+            backgroundColor: ['#2979FF', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
             data: [{{$artikel_headline}}, {{$artikel_indepth}}, {{$artikel_kebijakan}}, {{$artikel_serbaserbi}}, {{$artikel_konsultasi}}],
         }]
     },

@@ -1,7 +1,7 @@
 <div class="">
     <form action="{{ route('master-user.tambah.store') }}" method="POST">
         @csrf
-        <div class="row p-1 pl-3">
+        <div class="row">
             <div class="col-sm-6">
                 <div class="form-group row">
                     <label for="name" class="col-md-2 col-form-label">Nama<span class="text-danger ml-1">*</span></label>

@@ -17,7 +17,7 @@
 </head>
 <body>
     <div>
-        <textarea name="isi" id="summernote"></textarea>
+        <textarea name="isi" id="summernote">{!! $artikel->isi !!}</textarea>
     </div>
 </body>
 <script>

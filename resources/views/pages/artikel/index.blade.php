@@ -4,7 +4,7 @@
     <div id="content">
         @include('masterPages.top-bar')
         <!-- Alerts Success-->
-        <div class="container-fluid">
+        <div class="ml-2 mr-2">
             @if (session()->has('success'))
             <div class="alert alert-success alert-dismissible fade show text-center col-md-3 container" role="alert">
                 {{ session('success') }}
@@ -24,7 +24,7 @@
                 <ul>
                     @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
-                    @endforeach
+                    @endforeach  
                 </ul>
             </div>
             @endif
@@ -50,6 +50,7 @@
                         </form>
                     </div>
                     @endif
+                    <button class="btn btn-primary mr-3" >Edit</button>
                 </div>
                 <div class="card p-3" >
                     @include('pages.artikel.isi')

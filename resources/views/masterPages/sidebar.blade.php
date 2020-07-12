@@ -13,14 +13,14 @@
         </a>
     </li>
     <hr class="sidebar-divider">
-    <div class="sidebar-heading">Data</div>
+    <div class="sidebar-heading">Data 1</div>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#user" aria-expanded="true"
             aria-controls="collapseTwo">
             <i class="fas fa-user"></i>
             <span>User</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="user" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('master-user.user') }}">User</a>
                 <a class="collapse-item" href="{{ route('master-user.admin') }}">Admin</a>
@@ -28,14 +28,71 @@
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#artikel" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-archive"></i>
             <span>Artikel</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="artikel" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('master-artikel.artikel') }}">Terverifikasi</a>
                 <a class="collapse-item" href="#">Belum Terverifikasi</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#konsultasi" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-archive"></i>
+            <span>Konsultasi</span>
+        </a>
+        <div id="konsultasi" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Pertanyaan</a>
+                <a class="collapse-item" href="#">Konsultasi</a>
+            </div>
+        </div>
+    </li>
+    <div class="sidebar-heading">Data 2</div>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#gambar" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-archive"></i>
+            <span>Gambar</span>
+        </a>
+        <div id="gambar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Header</a>
+                <a class="collapse-item" href="#">Footer</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#kategori" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-archive"></i>
+            <span>Kategori</span>
+        </a>
+        <div id="kategori" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Ulasan</a>
+                <a class="collapse-item" href="#">Kajian</a>
+                <a class="collapse-item" href="#">Kreativitas</a>
+                <a class="collapse-item" href="#">Konsultasi</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#kontak" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-archive"></i>
+            <span>Kontak</span>
+        </a>
+        <div id="kontak" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Whatsapp</a>
+                <a class="collapse-item" href="#">Whatsapp Group</a>
+                <a class="collapse-item" href="#">Email</a>
+                <a class="collapse-item" href="#">Alamat</a>
+                <a class="collapse-item" href="#">Twitter</a>
+                <a class="collapse-item" href="#">Facebook</a>
+                <a class="collapse-item" href="#">Instagram</a>
+                <a class="collapse-item" href="#">Youtube</a>
             </div>
         </div>
     </li>

@@ -23,14 +23,26 @@ class ArtikelController extends Controller
 {
     protected $view = 'pages.artikel.index';
 
-    // List Article
-    public function index()
+    // List Article Verified
+    public function terverifikasi()
     {
-        $section  = 'index';
-        $artikels = Artikel::all();
+        $section  = 'artikelTerverifikasi';
+        $artikelTerverifikasi = Artikel::wherestatus(1)->get();
 
         return view($this->view, compact(
-            'artikels',
+            'artikelTerverifikasi',
+            'section'
+        ));
+    }
+
+    // List Article Unverified
+    public function belumTerverifikasi()
+    {
+        $section = 'artikelBelumTerverifikasi';
+        $artikelBelumTerverifikasi = Artikel::wherestatus(0)->get();
+
+        return view($this->view, compact(
+            'artikelBelumTerverifikasi',
             'section'
         ));
     }

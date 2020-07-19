@@ -34,9 +34,15 @@ Route::group(['middleware' => ['auth']], function () {
 
     // Master Article
     Route::prefix('master-artikel')->name('master-artikel.')->group(function () {
-        Route::get('artikel', 'ArtikelController@index')->name('artikel');
+        Route::get('artikel-terverikasi', 'ArtikelController@terverifikasi')->name('tervefikasi');
+        Route::get('artikel-Belumterverikasi', 'ArtikelController@belumTerverifikasi')->name('Belumtervefikasi');
         Route::get('isi-artikel', 'ArtikelController@isi')->name('isi');
         Route::put('publish-artikel', 'ArtikelController@publishArtikel')->name('isi.publishArtikel');
         Route::get('delete', 'ArtikelController@delete')->name('delete');
     });
+
+    // Master Gambar
+    // Route::prefix('gambar')->name('gambar.')->group(function () {
+    //     Route::get('header', 'GambarController@index');
+    // });
 });

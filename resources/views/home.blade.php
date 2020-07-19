@@ -14,5 +14,5 @@
 </div>
 @endsection
 @else
-@include('masterPages.error')
+@include('masterPages.error404')
 @endif

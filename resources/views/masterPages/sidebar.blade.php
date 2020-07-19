@@ -34,8 +34,22 @@
         </a>
         <div id="artikel" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('master-artikel.artikel') }}">Terverifikasi</a>
-                <a class="collapse-item" href="#">Belum Terverifikasi</a>
+                <a class="collapse-item" href="{{ route('master-artikel.tervefikasi') }}">Terverifikasi</a>
+                <a class="collapse-item" href="{{ route('master-artikel.Belumtervefikasi') }}">Belum Terverifikasi</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#kategori" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-archive"></i>
+            <span>Kategori</span>
+        </a>
+        <div id="kategori" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Ulasan</a>
+                <a class="collapse-item" href="#">Kajian</a>
+                <a class="collapse-item" href="#">Kreativitas</a>
+                <a class="collapse-item" href="#">Konsultasi</a>
             </div>
         </div>
     </li>
@@ -61,20 +75,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="#">Header</a>
                 <a class="collapse-item" href="#">Footer</a>
-            </div>
-        </div>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#kategori" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-archive"></i>
-            <span>Kategori</span>
-        </a>
-        <div id="kategori" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Ulasan</a>
-                <a class="collapse-item" href="#">Kajian</a>
-                <a class="collapse-item" href="#">Kreativitas</a>
-                <a class="collapse-item" href="#">Konsultasi</a>
+                <a class="collapse-item" href="#">Poster</a>
             </div>
         </div>
     </li>

@@ -4,55 +4,38 @@
     <div id="content">
         @include('masterPages.top-bar')
         <div class="ml-2 mr-2">
-            <!-- Alerts Success-->
-            @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show col-md-5" role="alert">
-                {{ session('success') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            @endif  
-            <!-- Alerts Error -->
-            @if (count($errors) > 0)
-            <div class="alert alert-danger alert-dismissible fade show col-md-5">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <strong>Whoops Error!</strong>&nbsp;
-                <span>You have {{ $errors->count() }} error</span>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif
+            @include('masterPages.alerts')
             <!-- Content -->
             @if ($section == 'user')
             <div class="card">
-                <h5 class="card-header primary-color"><i class="fa fa-user mr-3"></i>Akun User </h5>
+                <h6 class="card-header primary-color">
+                    <i class="fa fa-user"></i><span class="ml-2">Akun User</span> 
+                </h6>
                 <div class="card-body">
                     @include('pages.masterUser.table_user')
                 </div>
             </div>
             @elseif($section == 'admin')
             <div class="card">
-                <h5 class="card-header primary-color"><i class="fa fa-user-secret mr-3"></i>Akun Admin</h5>
+                <h6 class="card-header primary-color">
+                    <i class="fa fa-user-secret"></i><span class="ml-2">Akun Admin</span> 
+                </h6>
                 <div class="card-body">
                     @include('pages.masterUser.table_admin')
                 </div>
             </div>
             @elseif($section == 'tambah')
             <div class="card">
-                <h5 class="card-header primary-color"><i class="fa fa-user-plus"></i><span class="ml-2">Tambah User</span></h5>
+                <h6 class="card-header primary-color"><i class="fa fa-user-plus"></i><span class="ml-2">Tambah User</span></h6>
                 <div class="card-body">
                     @include('pages.masterUser.tambah')
                 </div>
             </div>
             @else
             <div class="card">
-                <h5 class="card-header primary-color"><i class="fa fa-user-edit"></i><span class="ml-2">Edit User</span></h5>
+                <h6 class="card-header primary-color">
+                    <i class="fa fa-user-edit"></i><span class="ml-2">Edit User</span> 
+                </h6>
                 <div class="card-body">
                     @include('pages.masterUser.edit')
                 </div>

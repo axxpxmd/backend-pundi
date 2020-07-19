@@ -1,13 +1,13 @@
-<div class="table-responsive">
+<div class="table-responsive fs-14">
     <table id="dataTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th class="btb-n" width="30">No</th>
+                <th width="10" class="btb-n" width="30">No</th>
                 <th class="btb-n">Nama</th>
                 <th class="btb-n">Email</th>
                 <th class="btb-n">Role</th>
                 <th class="btb-n">Nomor HP</th>
-                <th class="text-center btb-n">Aksi</th>
+                <th width="40" class="text-center btb-n">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -22,21 +22,20 @@
                 <td>{{ $i->nomor_hp }}</td>
                 <td class="text-center">
                     <a href="{{ route('master-user.edit', 'user='.$i->id) }}"><i class="fa fa-edit mr-2"></i></a>
-                    <a href="" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-trash"></i></a>
+                    <a href="#" data-toggle="modal" data-target="#confirmation"><i class="fa fa-trash text-danger"></i></a>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
-    <button class="btn btn-dark mt-2">
-        <a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none">
+    <button class="btn btn-success mt-2">
+        <a href="{{ route('master-user.tambah') }}" class="text-white text-decoration-none fs-14">
             <i class="fa fa-plus-square mr-2"></i>Tambah 
         </a>
     </button>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade moda" id="confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h6 class="modal-title" id="exampleModalLabel">
@@ -48,10 +47,10 @@
             </div>
             <div class="modal-footer border-0">
                 <button type="button" class="btn btn-dark" data-dismiss="modal">
-                    <i class="fa fa-times mr-2"></i>Cancel
+                    <i class="fa fa-times mr-2"></i><span class="fs-14">Cancel</span>
                 </button>
                 <button type="button" class="btn btn-danger">
-                    <a class="text-white text-decoration-none" href="{{ route('master-user.delete', 'user='.$i->id) }}">
+                    <a class="text-white text-decoration-none fs-14" href="{{ route('master-user.delete', 'user='.$i->id) }}">
                         <i class="fa fa-trash mr-2"></i>Hapus
                     </a>
                 </button>

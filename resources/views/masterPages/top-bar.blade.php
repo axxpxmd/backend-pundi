@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top border">
     <div class="row">
-        <li type="none" class="mr-1 ml-4">
+        <li type="none" class="mr-1 ml-4 fs-13">
             <i class="fa fa-calendar-check mr-1" style="color:#2979FF"></i>
             <a id="hari"></a>
             ,
@@ -9,7 +9,7 @@
             <a id="tahun"></a>
             /
         </li>
-        <li type="none">
+        <li type="none" class="fs-13">
             <a id="jam"></a>
             :
             <a id="menit"></a>

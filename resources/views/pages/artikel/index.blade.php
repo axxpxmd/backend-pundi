@@ -3,37 +3,21 @@
 <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
         @include('masterPages.top-bar')
-        <!-- Alerts Success-->
         <div class="ml-2 mr-2">
-            @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show text-center col-md-3 container" role="alert">
-                {{ session('success') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            @endif  
-            <!-- Alerts Error -->
-            @if (count($errors) > 0)
-            <div class="alert alert-danger m-t-30 col-md-6">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <strong>Whoops Error!</strong>&nbsp;
-                <span>You have {{ $errors->count() }} error</span>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach  
-                </ul>
-            </div>
-            @endif
+            @include('masterPages.alerts')
             <!-- Content -->
-            @if ($section == 'index')
+            @if ($section == 'artikelTerverifikasi')
             <div class="card">
-                <h5 class="card-header primary-color"><i class="fa fa-file"></i><span class="ml-2">Artikel Terverifikasi</span></h5>
+                <h6 class="card-header primary-color"><i class="fa fa-file"></i><span class="ml-2">Artikel Terverifikasi</span></h6>
                 <div class="card-body">
-                    @include('pages.artikel.table')
+                    @include('pages.artikel.tableTerverifikasi')
+                </div>
+            </div>
+            @elseif($section == 'artikelBelumTerverifikasi')
+            <div class="card">
+                <h6 class="card-header primary-color"><i class="fa fa-file"></i><span class="ml-2">Artikel Belum Terverifikasi</span></h6>
+                <div class="card-body">
+                    @include('pages.artikel.tableBelumTerverifikasi')
                 </div>
             </div>
             @elseif($section == 'isi')

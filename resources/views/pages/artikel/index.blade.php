@@ -21,25 +21,9 @@
                 </div>
             </div>
             @elseif($section == 'isi')
-            <div class="container-fluid col-md-8">
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Artikel</h1>
-                    @if ($artikel->status == 0)
-                    <div class="row">
-                        <button class="btn btn-secondary mr-4" type="button" onclick="history.back();">Back</button>
-                        <form action="{{ route('master-artikel.isi.publishArtikel', 'post='.$artikel->id) }}" method="POST">
-                            {{ csrf_field() }}
-                            {{ method_field('PUT') }}
-                            <button class="btn btn-primary mr-3" >Publish</button>
-                        </form>
-                    </div>
-                    @endif
-                    <button class="btn btn-primary mr-3" >Edit</button>
-                </div>
-                <div class="card p-3" >
-                    @include('pages.artikel.isi')
-                </div>
-            </div>
+            @include('pages.artikel.isi')
+            @elseif($section == 'editArtikel')
+            @include('pages.artikel.edit')
             @endif
         </div>
     </div>

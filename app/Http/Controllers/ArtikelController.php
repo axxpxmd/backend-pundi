@@ -15,6 +15,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 // Models
 use App\Models\Artikel;
@@ -51,7 +52,7 @@ class ArtikelController extends Controller
     public function isi(Request $request)
     {
         $section = 'isi';
-        $artikel = Artikel::whereid($request->post)->first();
+        $artikel = Artikel::whereid($request->artikel_id)->first();
 
         return view($this->view, compact(
             'artikel',
@@ -59,10 +60,64 @@ class ArtikelController extends Controller
         ));
     }
 
+    // Edit Artikel
+    public function editArtikel(Request $request)
+    {
+        $section = 'editArtikel';
+        $artikel = Artikel::whereid($request->artikel_id)->first();
+
+        return view($this->view, compact(
+            'artikel',
+            'section'
+        ));
+    }
+
+    // Update Artikel 
+    public function updateArtikel(Request $request)
+    {
+        $request->validate([
+            'judul'  => 'required',
+            'isi'    => 'required|min:500',
+        ]);
+
+        $id     = $request->artikel_id;
+        $judul  = $request->judul;
+        $isi    = $request->isi;
+        $id_user = $request->Auth::user()->id;
+
+        if ($request->gambar != null) {
+            $file     = $request->file('gambar');
+            $fileName = time() . "." . $file->getClientOriginalName();
+            $request->file('gambar')->move("http://pundi.or.id/public/post/", $fileName);
+            $gambar   = $fileName;
+        }
+
+        if ($request->gambar != null) {
+            $artikel = Artikel::findOrFail($id);
+            $artikel->update([
+                'judul'     => $judul,
+                'gambar'    => $gambar,
+                'isi'       => $isi,
+                'editor_id' => $id_user
+            ]);
+        }
+
+        $artikel = Artikel::findOrFail($id);
+        $artikel->update([
+            'judul'     => $judul,
+            'isi'       => $isi,
+            'editor_id' => Auth::user()->id
+        ]);
+
+        return redirect()
+            ->route('master-artikel.editArtikel', 'artikel_id=' . $id)
+            ->withSuccess('Artikel Berhasil diperbaharui !');
+    }
+
     // Publish Article
     public function publishArtikel(Request $request)
     {
-        $id = $request->post;
+        $id = $request->artikel_id;
 
         $publish = Artikel::FindOrFail($id);
         $publish->update([
@@ -70,8 +125,23 @@ class ArtikelController extends Controller
         ]);
 
         return redirect()
-            ->route('master-artikel.isi', 'post=' . $id)
+            ->route('master-artikel.isi', 'artikel_id=' . $id)
             ->withSuccess('Artikel Berhasil Terpublish !');
+    }
+
+    // Unpublish Article
+    public function UnpublishArtikel(Request $request)
+    {
+        $id = $request->artikel_id;
+
+        $publish = Artikel::FindOrFail($id);
+        $publish->update([
+            'status' => 0
+        ]);
+
+        return redirect()
+            ->route('master-artikel.isi', 'artikel_id=' . $id)
+            ->withSuccess('Artikel Berhasil Ditarik kembali !');
     }
 
     // Delete Article

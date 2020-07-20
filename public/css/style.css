@@ -7,3 +7,23 @@
     /* color: #5A5C69; */
     color: #2979FF;
 }
+
+.-ml-30{
+    margin-left: -30px;
+}
+
+.-ml-40{
+    margin-left: -40px;
+}
+
+.-ml-50{
+    margin-left: -50px;
+}
+
+.-mt-20{
+    margin-top: -20px;
+}
+
+.-mt-10{
+    margin-top: -10px;
+}

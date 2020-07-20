@@ -17,6 +17,11 @@ class Artikel extends Model
         return $this->belongsTo(User::class, 'penulis_id');
     }
 
+    public function editor()
+    {
+        return $this->belongsTo(User::class, 'editor_id');
+    }
+
     public function kategori()
     {
         return $this->belongsTo(Kategori::class, 'kategori_id');

@@ -18,7 +18,7 @@
             <tr>
                 <td class="text-center">{{ $no }}</td>
                 <td>
-                    <a class="text-decoration-none" href="{{ route('master-artikel.isi', 'post='.$i->id) }}">{{ $i->judul }}</a>
+                    <a class="text-decoration-none" href="{{ route('master-artikel.isi', 'artikel_id='.$i->id) }}">{{ $i->judul }}</a>
                 </td>
                 <td>{{ $i->kategori->n_kategori }}</td>
                 <td>{{ $i->user->name }}</td>

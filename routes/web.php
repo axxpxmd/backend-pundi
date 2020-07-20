@@ -38,6 +38,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('artikel-Belumterverikasi', 'ArtikelController@belumTerverifikasi')->name('Belumtervefikasi');
         Route::get('isi-artikel', 'ArtikelController@isi')->name('isi');
         Route::put('publish-artikel', 'ArtikelController@publishArtikel')->name('isi.publishArtikel');
+        Route::put('unpublish-artikel', 'ArtikelController@UnpublishArtikel')->name('isi.UnpublishArtikel');
+        Route::get('edit-artikel', 'ArtikelController@editArtikel')->name('editArtikel');
+        Route::put('editArtikel-update', 'ArtikelController@updateArtikel')->name('editArtikel.update');
         Route::get('delete', 'ArtikelController@delete')->name('delete');
     });
 

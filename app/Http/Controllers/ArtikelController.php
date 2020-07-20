@@ -83,7 +83,6 @@ class ArtikelController extends Controller
         $id     = $request->artikel_id;
         $judul  = $request->judul;
         $isi    = $request->isi;
-        $id_user = $request->Auth::user()->id;
 
         if ($request->gambar != null) {
             $file     = $request->file('gambar');
@@ -98,7 +97,6 @@ class ArtikelController extends Controller
                 'judul'     => $judul,
                 'gambar'    => $gambar,
                 'isi'       => $isi,
-                'editor_id' => $id_user
             ]);
         }
 
@@ -106,7 +104,6 @@ class ArtikelController extends Controller
         $artikel->update([
             'judul'     => $judul,
             'isi'       => $isi,
-            'editor_id' => Auth::user()->id
         ]);
 
         return redirect()

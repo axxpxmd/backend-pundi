@@ -65,7 +65,7 @@
                     <form action="{{ route('master-artikel.isi.publishArtikel', 'artikel_id='.$artikel->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
-                        <input type="text" name="user_id" value="{{ Auth::user()->id }}">
+                        {{-- <input type="text" name="user_id" value="{{ Auth::user()->id }}"> --}}
                         <button class="btn btn-primary mr-3" >Publish</button>
                         <button class="btn btn-success mr-4" type="button">
                             <a class="text-decoration-none text-white" href="{{ Route('master-artikel.editArtikel','artikel_id='. $artikel->id ) }}">Edit</a>
@@ -76,7 +76,7 @@
                     <form class="mt-3 text-center" action="{{ route('master-artikel.isi.UnpublishArtikel', 'artikel_id='.$artikel->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
-                        <input type="text" name="user_id" value="{{ Auth::user()->id }}">
+                        {{-- <input type="text" name="user_id" value="{{ Auth::user()->id }}"> --}}
                         <button class="btn btn-danger mr-3" >Unpublish</button>
                         <button class="btn btn-success mr-4" type="button">
                             <a class="text-decoration-none text-white" href="{{ Route('master-artikel.editArtikel','artikel_id='. $artikel->id ) }}">Edit</a>

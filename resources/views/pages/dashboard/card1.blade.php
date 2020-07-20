@@ -23,7 +23,7 @@
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $artikels->count() }}</div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-archive fa-2x text-gray-300"></i>
+                        <i class="fas fa-file-alt fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $artikel_terbaca }}</div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-fire fa-2x text-gray-300"></i>
+                        <i class="fas fa-eye fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $artikel_status }}</div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-check fa-2x text-gray-300"></i>
+                        <i class="fas fa-times fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>

@@ -80,9 +80,10 @@ class ArtikelController extends Controller
             'isi'    => 'required|min:500',
         ]);
 
-        $id     = $request->artikel_id;
-        $judul  = $request->judul;
-        $isi    = $request->isi;
+        $id        = $request->artikel_id;
+        $editor_id = Auth::user()->id;
+        $judul     = $request->judul;
+        $isi       = $request->isi;
 
         if ($request->gambar != null) {
             $file     = $request->file('gambar');
@@ -97,6 +98,7 @@ class ArtikelController extends Controller
                 'judul'     => $judul,
                 'gambar'    => $gambar,
                 'isi'       => $isi,
+                'editor_id' => $editor_id
             ]);
         }
 
@@ -104,6 +106,7 @@ class ArtikelController extends Controller
         $artikel->update([
             'judul'     => $judul,
             'isi'       => $isi,
+            'editor_id' => $editor_id
         ]);
 
         return redirect()
@@ -115,10 +118,12 @@ class ArtikelController extends Controller
     public function publishArtikel(Request $request)
     {
         $id = $request->artikel_id;
+        $editor_id = Auth::user()->id;
 
         $publish = Artikel::FindOrFail($id);
         $publish->update([
-            'status' => 1
+            'status'    => 1,
+            'editor_id' => $editor_id
         ]);
 
         return redirect()
@@ -130,10 +135,12 @@ class ArtikelController extends Controller
     public function UnpublishArtikel(Request $request)
     {
         $id = $request->artikel_id;
+        $editor_id = Auth::user()->id;
 
         $publish = Artikel::FindOrFail($id);
         $publish->update([
-            'status' => 0
+            'status' => 0,
+            'editor_id' => $editor_id
         ]);
 
         return redirect()

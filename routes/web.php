@@ -44,8 +44,16 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('delete', 'ArtikelController@delete')->name('delete');
     });
 
-    // Master Gambar
-    // Route::prefix('gambar')->name('gambar.')->group(function () {
-    //     Route::get('header', 'GambarController@index');
-    // });
+    // Master Kategori 
+    Route::prefix('master-kategori')->name('master-kategori')->group(function () {
+        // 
+    });
+
+    // Master Konsultasi
+    Route::prefix('konsultasi')->name('konsultasi.')->group(function () {
+        Route::get('pertanyaan', 'KonstultasiController@pertanyaan')->name('pertanyaan');
+        Route::get('isiPertanyaan', 'KonstultasiController@isiPertanyaan')->name('isiPertanyaan');
+        Route::get('konsultasi', 'KonstultasiController@konsultasi')->name('konsultasi');
+        Route::get('isiKonsultasi', 'KonstultasiController@isiKonsultasi')->name('isiKonsultasi');
+    });
 });

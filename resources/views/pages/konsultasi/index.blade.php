@@ -6,40 +6,28 @@
         <div class="ml-2 mr-2">
             @include('masterPages.alerts')
             <!-- Content -->
-            @if ($section == 'user')
+            @if ($section == 'pertanyaan')
             <div class="card">
                 <h6 class="card-header primary-color">
-                    <i class="fa fa-user"></i><span class="ml-2">Akun User</span> 
+                    <i class="fa fa-question-circle"></i><span class="ml-2">Pertanyaan</span> 
                 </h6>
                 <div class="card-body">
-                    @include('pages.masterUser.table_user')
+                    @include('pages.konsultasi.tablePertanyaan')
                 </div>
             </div>
-            @elseif($section == 'admin')
+            @elseif($section == 'isiPertanyaan')
+            @include('pages.konsultasi.isiPertanyaan')
+            @elseif($section == 'konsultasi')
             <div class="card">
                 <h6 class="card-header primary-color">
-                    <i class="fa fa-user-secret"></i><span class="ml-2">Akun Admin</span> 
+                    <i class="fa fa-file-alt"></i><span class="ml-2">Konsultasi</span> 
                 </h6>
                 <div class="card-body">
-                    @include('pages.masterUser.table_admin')
+                    @include('pages.konsultasi.tableKonsultasi')
                 </div>
             </div>
-            @elseif($section == 'tambah')
-            <div class="card">
-                <h6 class="card-header primary-color"><i class="fa fa-user-plus"></i><span class="ml-2">Tambah User</span></h6>
-                <div class="card-body">
-                    @include('pages.masterUser.tambah')
-                </div>
-            </div>
-            @else
-            <div class="card">
-                <h6 class="card-header primary-color">
-                    <i class="fa fa-user-edit"></i><span class="ml-2">Edit User</span> 
-                </h6>
-                <div class="card-body">
-                    @include('pages.masterUser.edit')
-                </div>
-            </div> 
+            @elseif($section == 'isiKonsultasi')
+            @include('pages.konsultasi.isiKonsultasi')
             @endif
         </div>
     </div>

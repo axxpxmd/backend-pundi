@@ -18,19 +18,19 @@
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Nama</label>
                         <div class="col-sm-9">
-                          <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->name }}</label>
+                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->name }}</label>
                         </div>
                     </div>
                     <div class="form-group row -mt-20">
                         <label class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
-                          <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->email }}</label>
+                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->email }}</label>
                         </div>
                     </div>
                     <div class="form-group row -mt-20">
                         <label class="col-sm-3 col-form-label">Kontak</label>
                         <div class="col-sm-9">
-                          <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->nomor_hp }}</label>
+                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->nomor_hp }}</label>
                         </div>
                     </div>
                 </div>
@@ -44,13 +44,13 @@
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Nama</label>
                         <div class="col-sm-9">
-                          <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->editor->name }}</label>
+                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->editor->name }}</label>
                         </div>
                     </div>
                     <div class="form-group row -mt-20">
                         <label class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
-                          <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->editor->email }}</label>
+                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->editor->email }}</label>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <form action="{{ route('master-artikel.isi.publishArtikel', 'artikel_id='.$artikel->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
-                        <button class="btn btn-primary mr-3" >Publish</button>
+                        <button class="btn btn-primary mr-3">Publish</button>
                         <button class="btn btn-success mr-4" type="button">
                             <a class="text-decoration-none text-white" href="{{ Route('master-artikel.editArtikel','artikel_id='. $artikel->id ) }}">Edit</a>
                         </button>

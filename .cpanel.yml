@@ -1,0 +1,7 @@
+deployment:
+ 
+ tasks:
+ 
+ - export DEPLOYPATH=/public_html/backend
+ 
+ - /usr/bin/rsync -Paz * $DEPLOYPATH --delete

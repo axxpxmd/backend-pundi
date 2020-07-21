@@ -88,7 +88,7 @@ class ArtikelController extends Controller
         if ($request->gambar != null) {
             $file     = $request->file('gambar');
             $fileName = time() . "." . $file->getClientOriginalName();
-            $request->file('gambar')->move("post/", $fileName);
+            $request->file('gambar')->move(".././storage/post", $fileName);
             $gambar   = $fileName;
         }
 

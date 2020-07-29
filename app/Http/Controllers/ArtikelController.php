@@ -28,7 +28,7 @@ class ArtikelController extends Controller
     public function terverifikasi()
     {
         $section  = 'artikelTerverifikasi';
-        $artikelTerverifikasi = Artikel::wherestatus(1)->get();
+        $artikelTerverifikasi = Artikel::wherestatus(1)->with('user')->with('kategori')->get();
 
         return view($this->view, compact(
             'artikelTerverifikasi',
@@ -77,7 +77,7 @@ class ArtikelController extends Controller
     {
         $request->validate([
             'judul'  => 'required',
-            'isi'    => 'required|min:500',
+            'isi'    => 'required|min:700',
         ]);
 
         $id        = $request->artikel_id;
@@ -88,7 +88,7 @@ class ArtikelController extends Controller
         if ($request->gambar != null) {
             $file     = $request->file('gambar');
             $fileName = time() . "." . $file->getClientOriginalName();
-            $request->file('gambar')->move(".././storage/post", $fileName);
+            $request->file('gambar')->move(config('app.path_local') . 'artikel/', $fileName);
             $gambar   = $fileName;
         }
 

@@ -4,60 +4,8 @@
         {{ method_field('PUT') }}
         <div class="row">
             <div class="col-sm-3">
-                <div class="card">
-                    <div class="text-center mt-3 primary-color">
-                        <h6>PENULIS</h6>
-                        <hr width="150">
-                    </div>
-                    <div class="text-center">
-                        @if ($artikel->user->photo != null)
-                        <img class="img-fluid rounded mx-auto d-block mb-2" src="http://103.219.112.114/pundi/public/ava/{{$artikel->user->photo}}" width="80" alt="">
-                        @else
-                        <img class="img-fluid rounded mx-auto d-block mb-2" src="{{ asset('images/boy.png') }}" width="80" alt="">
-                        @endif
-                        <p>{{ $artikel->user->bio }}</p>
-                    </div>
-                    <div class="ml-3">
-                        <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Nama</label>
-                            <div class="col-sm-9">
-                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->name }}</label>
-                            </div>
-                        </div>
-                        <div class="form-group row -mt-20">
-                            <label class="col-sm-3 col-form-label">Email</label>
-                            <div class="col-sm-9">
-                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->email }}</label>
-                            </div>
-                        </div>
-                        <div class="form-group row -mt-20">
-                            <label class="col-sm-3 col-form-label">Kontak</label>
-                            <div class="col-sm-9">
-                            <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->user->nomor_hp }}</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mt-2">
-                    <div class="text-center mt-3 primary-color">
-                        <h6>Editor</h6>
-                        <hr width="150">
-                    </div>
-                    <div class="ml-3">
-                        <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Nama</label>
-                            <div class="col-sm-9">
-                                <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->editor == null ? '-' : $artikel->editor->name }}</label>
-                            </div>
-                        </div>
-                        <div class="form-group row -mt-20">
-                            <label class="col-sm-3 col-form-label">Email</label>
-                            <div class="col-sm-9">
-                                <label class="form-control-plaintext -ml-30">:&nbsp; {{ $artikel->editor == null ? '-' : $artikel->editor->email }}</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @include('pages.artikel.info-penulis')
+                @include('pages.artikel.info-editor')
                 <div class="card mt-2">
                     <div class="text-center mt-3 primary-color">
                         <h6>AKSI UNTUK ARTIKEL</h6>
@@ -81,14 +29,15 @@
                             <img class="img-fluid rounded mx-auto d-block mb-3" src="http://103.219.112.114/pundi/public/post/{{$artikel->gambar}}" width="250" alt="">
                             <div>
                                 <div class="alert alert-dismissible" id="message" data-target="#exampleModal" role="alert"></div>
-                                <div class="-mt-20 mb-3">
+                                <div class="-mt-20 mb-2">
                                     <label for="" class="f-b fs-17">GANTI GAMBAR</label><br>
-                                    <input type="file" name="gambar" class="m-l-120" id="gambar" onchange="tampilkanPreview(this,'preview')">
-                                    <label for="file" class="js-labelFile">
-                                        <span class="js-fileName"></span>
+                                    <input type="file" name="gambar" class="m-l-120 input-file" id="file" onchange="tampilkanPreview(this,'preview')">
+                                    <label for="file" class="btn btn-outline-dark js-labelFile">
+                                        <i class="icon fa fa-check"></i>
+                                        <span class="js-fileName">Change Photo Profil</span>
                                     </label>
                                     <br>
-                                    <img width="300" class="rounded img-fluid mx-auto d-block" id="preview" alt="" style="margin-top: 10px"/>
+                                    <img width="300" class="rounded img-fluid mx-auto d-block m-t-10" id="preview" alt=""/>
                                 </div>
                             </div>
                         </div>

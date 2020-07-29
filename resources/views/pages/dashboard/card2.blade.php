@@ -106,7 +106,7 @@
     options: {
         tooltips: {
             backgroundColor: "rgb(255,255,255)",
-            bodyFontColor: "#858796",
+            bodyFontColor: "#000000",
             borderColor: '#dddfeb',
             borderWidth: 1,
             xPadding: 15,

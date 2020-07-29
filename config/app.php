@@ -123,6 +123,9 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'path_url' => env('PATH_URL'),
+    'path_local' => env('PATH_LOCAL'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

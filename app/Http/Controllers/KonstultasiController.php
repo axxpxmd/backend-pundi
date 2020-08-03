@@ -59,6 +59,17 @@ class KonstultasiController extends Controller
         ));
     }
 
+    // Delete Question
+    public function deletePertanyaan(Request $request)
+    {
+        $pertanyaan_id = $request->pertanyaan_id;
+        Pertanyaan::whereid($pertanyaan_id)->delete();
+
+        return redirect()
+            ->back()
+            ->withSuccess('Pertanyaan berhasil dihapus !');
+    }
+
     // List Consultation
     public function konsultasi(Request $request)
     {
@@ -91,5 +102,16 @@ class KonstultasiController extends Controller
             'section',
             'isiKonsultasi'
         ));
+    }
+
+    // Delete Consultation
+    public function deleteKonsultasi(Request $request)
+    {
+        $konsultasi_id = $request->konsultasi_id;
+        Konsultasi::whereid($konsultasi_id)->delete();
+
+        return redirect()
+            ->back()
+            ->withSuccess('Konsultasi berhasil dihapus!');
     }
 }

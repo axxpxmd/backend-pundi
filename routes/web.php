@@ -58,7 +58,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::prefix('konsultasi')->name('konsultasi.')->group(function () {
         Route::get('pertanyaan', 'KonstultasiController@pertanyaan')->name('pertanyaan');
         Route::get('isiPertanyaan', 'KonstultasiController@isiPertanyaan')->name('isiPertanyaan');
+        Route::get('deletePertanyaan', 'KonstultasiController@deletePertanyaan')->name('deletePertanyaan');
         Route::get('konsultasi', 'KonstultasiController@konsultasi')->name('konsultasi');
         Route::get('isiKonsultasi', 'KonstultasiController@isiKonsultasi')->name('isiKonsultasi');
+        Route::get('deleteKonsultasi', 'KonstultasiController@deleteKonsultasi')->name('deleteKonsultasi');
     });
 });

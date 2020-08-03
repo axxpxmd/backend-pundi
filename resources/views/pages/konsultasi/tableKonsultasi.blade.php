@@ -44,7 +44,7 @@
                     <i class="fa fa-times mr-2 fs-14"></i><span class="fs-14">Cancel</span>
                 </button>
                 <button type="button" class="btn btn-danger">
-                    <a class="text-white text-decoration-none fs-14" href="{{ route('master-user.delete', 'user='.$i->id) }}">
+                    <a class="text-white text-decoration-none fs-14" href="{{ route('konsultasi.deleteKonsultasi', 'konsultasi_id='.$i->id) }}">
                         <i class="fa fa-trash mr-2"></i>Hapus
                     </a>
                 </button>

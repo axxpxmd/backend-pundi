@@ -25,8 +25,7 @@
                     </div>
                     <div class="p-4 -mt-20">
                         <div class="text-center">
-                            <input type="text" class="form-control mb-3" id="judul" name="judul" value="{{ $artikel->judul }}">
-                            <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}"  width="250" alt="">
+                            <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}"  width="250" alt="photo">
                             <div>
                                 <div class="alert alert-dismissible" id="message" data-target="#exampleModal" role="alert"></div>
                                 <div class="-mt-20 mb-2">
@@ -40,6 +39,7 @@
                                     <img width="300" class="rounded img-fluid mx-auto d-block m-t-10" id="preview" alt=""/>
                                 </div>
                             </div>
+                            <input type="text" class="form-control mb-3 text-black" id="judul" name="judul" value="{{ $artikel->judul }}">
                         </div>
                         @include('masterPages.summernote')
                     </div>

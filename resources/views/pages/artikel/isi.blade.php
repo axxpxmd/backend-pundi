@@ -60,8 +60,8 @@
                     <hr width="150">
                 </div>
                 <div class="p-4 -mt-10">
-                    <h5 class="mb-3 text-center">{{ $artikel->judul }}</h5>
-                    <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}" width="250" alt="">
+                    <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}" width="250" alt="photo">
+                    <h5 class="mb-3">{{ $artikel->judul }}</h5>
                     <div>
                         {!! $artikel->isi !!}
                     </div>

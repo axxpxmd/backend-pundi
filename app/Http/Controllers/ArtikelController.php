@@ -90,6 +90,11 @@ class ArtikelController extends Controller
             $fileName = time() . "." . $file->getClientOriginalName();
             $request->file('gambar')->move(config('app.path_local') . 'artikel/', $fileName);
             $gambar   = $fileName;
+
+            $data = User::findOrFail($id);
+            $file1 = $data->photo;
+            $filename1 = config('app.path_local') . 'ava/' . $file1;
+            \File::delete($filename1);
         }
 
         if ($request->gambar != null) {

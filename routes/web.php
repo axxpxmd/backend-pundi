@@ -49,6 +49,11 @@ Route::group(['middleware' => ['auth']], function () {
         // 
     });
 
+    // Master Gambar
+    Route::prefix('gambar')->name('gambar.')->group(function () {
+        // 
+    });
+
     // Master Konsultasi
     Route::prefix('konsultasi')->name('konsultasi.')->group(function () {
         Route::get('pertanyaan', 'KonstultasiController@pertanyaan')->name('pertanyaan');

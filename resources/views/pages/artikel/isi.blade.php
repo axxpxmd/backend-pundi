@@ -61,7 +61,7 @@
                 </div>
                 <div class="p-4 -mt-10">
                     <h5 class="mb-3 text-center">{{ $artikel->judul }}</h5>
-                    <img class="img-fluid rounded mx-auto d-block mb-3" src="http://103.219.112.114/pundi/public/post/{{$artikel->gambar}}" width="250" alt="">
+                    <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}" width="250" alt="">
                     <div>
                         {!! $artikel->isi !!}
                     </div>

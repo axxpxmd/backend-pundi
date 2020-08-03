@@ -26,7 +26,7 @@
                     <div class="p-4 -mt-20">
                         <div class="text-center">
                             <input type="text" class="form-control mb-3" id="judul" name="judul" value="{{ $artikel->judul }}">
-                            <img class="img-fluid rounded mx-auto d-block mb-3" src="http://103.219.112.114/pundi/public/post/{{$artikel->gambar}}" width="250" alt="">
+                            <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}"  width="250" alt="">
                             <div>
                                 <div class="alert alert-dismissible" id="message" data-target="#exampleModal" role="alert"></div>
                                 <div class="-mt-20 mb-2">

@@ -16,7 +16,7 @@
 </body>
 <script type="text/javascript">
     tinymce.init({
-        height: 500,
+        height: 580,
         selector: 'textarea',
         plugins: [
             'advlist autolink link image lists charmap preview hr anchor pagebreak',

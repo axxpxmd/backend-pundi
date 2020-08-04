@@ -48,7 +48,7 @@ class ArtikelController extends Controller
         ));
     }
 
-    // Artickel Content
+    // Article Content
     public function isi(Request $request)
     {
         $section = 'isi';
@@ -60,7 +60,7 @@ class ArtikelController extends Controller
         ));
     }
 
-    // Edit Artikel
+    // Edit Article
     public function editArtikel(Request $request)
     {
         $section = 'editArtikel';
@@ -72,7 +72,7 @@ class ArtikelController extends Controller
         ));
     }
 
-    // Update Artikel 
+    // Update Article 
     public function updateArtikel(Request $request)
     {
         $request->validate([
@@ -91,7 +91,7 @@ class ArtikelController extends Controller
             $request->file('gambar')->move(config('app.path_local') . 'artikel/', $fileName);
             $gambar   = $fileName;
 
-            $data = User::findOrFail($id);
+            $data  = User::findOrFail($id);
             $file1 = $data->photo;
             $filename1 = config('app.path_local') . 'ava/' . $file1;
             \File::delete($filename1);

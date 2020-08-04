@@ -40,18 +40,10 @@
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#kategori" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="{{ route('master-kategori.kategori') }}">
             <i class="fas fa-archive"></i>
             <span>Kategori</span>
         </a>
-        <div id="kategori" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Ulasan</a>
-                <a class="collapse-item" href="#">Kajian</a>
-                <a class="collapse-item" href="#">Kreativitas</a>
-                <a class="collapse-item" href="#">Konsultasi</a>
-            </div>
-        </div>
     </li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#konsultasi" aria-expanded="true" aria-controls="collapseUtilities">

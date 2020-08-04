@@ -2,7 +2,7 @@
     <table id="dataTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th width="10" class="btb-n" width="30">No</th>
+                <th class="btb-n" width="30">No</th>
                 <th class="btb-n">Nama</th>
                 <th class="btb-n">Email</th>
                 <th width="700" class="btb-n">Konsultasi</th>

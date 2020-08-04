@@ -45,8 +45,11 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     // Master Kategori 
-    Route::prefix('master-kategori')->name('master-kategori')->group(function () {
-        // 
+    Route::prefix('master-kategori')->name('master-kategori.')->group(function () {
+        Route::get('kategori', 'KategoriController@index')->name('kategori');
+        Route::post('dataTable', 'KategoriController@dataTable')->name('dataTable');
+        Route::get('kategori/edit', 'KategoriController@edit')->name('edit');
+        Route::put('kategori/update', 'KategoriController@update')->name('update');
     });
 
     // Master Gambar
